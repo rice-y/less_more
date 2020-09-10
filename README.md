@@ -1,24 +1,39 @@
-# README
+# LessMore
+　自分の幸福につながるお金の使い方を
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリ概要
 
-Things you may want to cover:
+  あれが欲しい、海外旅行に行きたいといった
+  まとまったお金を必要とする願望を実現するアプリです。
 
-* Ruby version
+  １、自分の生活費を見直し、削れる固定費を選択します。
+  ２、選択した固定費を削るアクションプランを提案します。
+  ３、削れた固定費を願望実現のための資金に充てます
 
-* System dependencies
+  自分の幸福につながらない無駄な支出をなくします。
 
-* Configuration
 
-* Database creation
+# 目指す課題解決
 
-* Database initialization
+  ”なんで贅沢をしていないのにお金がたまらないんだろう”
+  を解決し、
 
-* How to run the test suite
+  幸せに繋がらない支出を減らし、
+  より幸せにつながるお金の使い方が見つかります。
+　
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+  自分を含め、この疑問を抱く人のほとんどが月々の固定費、生活費に無頓着であると仮定して、このアプリの着想にいたりました。
+  実際、私は固定費や日々の生活費を全く把握していませんでした。
+  
+  ここを見直すことで数万円単位で支出を減らす。
 
-* ...
+  数万円昇給するより遥かに簡単に手っ取り早く、幸せになることができたのです。
+
+
+
+  自分の幸福につながらないお金の使い方をしていたことに
+  気がつきました。
+　
+  
+
