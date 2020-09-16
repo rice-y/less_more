@@ -1,0 +1,56 @@
+<div class="items-sell-main">
+    <h2 class="items-sell-title">欲しい物、したいことを入力しよう</h2>
+    <%= form_with model:@target, url:'/targets', local: true do |f| %>
+
+
+    <%# 出品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image,  id:"item-image" %>
+      </div>
+    </div>
+    <%# /出品画像 %>
+    
+    <%= date_field_tag :deadline, Date.today, use_month_numbers: true %>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　値段
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :price, class:"items-text", id:"item-name", placeholder:"価格を入力（半角）", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　目標詳細
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"目標の詳細　手に入れたらどうなるかなど、自分のモチベーションがあがる事を書いておきましょう！ " ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    
+    
+    </div>
+    <%# /注意書き %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "目標を決める" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
