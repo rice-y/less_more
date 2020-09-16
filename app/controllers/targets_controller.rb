@@ -2,8 +2,7 @@ class TargetsController < ApplicationController
   def index
     
   end
-<<<<<<< Updated upstream
-=======
+
   def create
     @target = Target.new(target_params)
       if @target.save
@@ -29,5 +28,5 @@ class TargetsController < ApplicationController
   end
 
   
->>>>>>> Stashed changes
+
 end
