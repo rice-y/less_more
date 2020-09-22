@@ -1,7 +1,7 @@
 class ExpensesController < ApplicationController
   def create
-    @target = Target.new(target_params)
-      if @target.save
+    @expense = Expense.new(target_params)
+      if @expense.save
         redirect_to root_path
       else
         render :new
