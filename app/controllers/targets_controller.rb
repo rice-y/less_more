@@ -1,7 +1,8 @@
 class TargetsController < ApplicationController
   def index
     @targets = Target.all
-    @data = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
+    # @data = [['2019-06-01', 100], ['2019-06-02', 200], ['2019-06-03', 150]]
+    # @data = [['食費', ＠expense.food], ['通信費', @expense.], ['家賃', @expense]]
   end
 
   def create
