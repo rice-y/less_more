@@ -3,25 +3,49 @@
     <%= form_with model:@expense, url:'/expenses', local: true do |f| %>
 
 
-
     <div class="new-items">
       <div class="weight-bold-text">
         
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :internet, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
         　値段
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :price, class:"items-text", id:"item-name", placeholder:"価格を入力（半角）", maxlength:"40" %>
+        <%= f.text_area :cell_phone, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-        　目標詳細
+        　値段
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :text, class:"items-text", id:"item-info", placeholder:"目標の詳細　手に入れたらどうなるかなど、自分のモチベーションがあがる事を書いておきましょう！ " ,rows:"7" ,maxlength:"1000" %>
-      </div>
+        <%= f.text_area :food, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　値段
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :gas, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　値段
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :water, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　値段
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :electric, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+        　値段
+          <span class="indispensable">必須</span>
+        </div>
+        
+        
+      <%= f.submit "決定" ,class:"sell-btn" %>
     </div>
     <%end%>

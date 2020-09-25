@@ -1,115 +1,46 @@
-
+<%= render "devise/shared/header" %>
 <% if user_signed_in?%>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">LESSMORE</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <% if user_signed_in?%>
-        <a class="nav-link">  <%= link_to "log out", destroy_user_session_path, method: :delete %></a>
-        <a class="nav-link">  <%= current_user.nickname %></a>
 
-        <%else%>
-        <a class="nav-link">  <%= link_to "log in", new_user_session_path %></a>
-        <a class="nav-link">  <%= link_to "sign up", new_user_registration_path %></a>
-        <%end%>
-      </nav>
-    </div>
-  </header>
 
   <main role="main" class="inner cover">
-    <h1 class="cover-heading">Less is more.</h1>
+    
    
 
     <div class="contents row">
   <% @targets.each do |target| %>
-  <p class="lead">支出を見直そう！浮いたお金で<%=target.name%>GET！！</p>
-
-    <div class="content_post" style="background-image: url(<%= target.image %>);">
-      
-    </div>
+   
 <div class="table-responsive">
     <table class="table">
-    
-    <thead>
-        <tr>
-            <th>目標</th>
-            <th>欲しい物</th>
-            <th>金額</th>
-            <th>詳細</th>
-            <th>期限</th>
-        </tr>
-    </thead>
     <tbody>
         <tr>
-            <th>詳細</th>
             <td><%= target.name%></td>
-            <td><%= target.price%></td>
-            <td><%= target.text%></td>
-            <td><%= target.deadline%>までにGET!</td>
+            <td>￥<%= target.price%></td>
+            <td>期限：<%= target.deadline%></td>
         </tr>
+<%# 
+       
        
     </tbody>
 </table>
+<%= image_tag target.image %>
+   <%= pie_chart @data %> 
 </div>
- <%# <%= image_tag target.image %> %>
-<%= pie_chart @data %> <%= link_to "支出を記録", new_expense_path %>
+    
+
   <% end %>
 </div>
-	
+
   
-    <%# <%= image_tag "photo-1459257831348-f0cdd359235f.jpeg", class:"main-pict" %> %>
-    <p class="btn btn-lg btn-secondary">
-       <%= link_to "目標を設定する", new_target_path %>
-    </p>
 
-    <%# <p class="btn btn-lg btn-secondary">
-       <%= link_to "目標を設定する", new_expense_path %>
-    </p> %>
+</main>
 
-  </main>
 
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </div>
-  </footer>
 </div>
-<%else%>
-   <div class='fixed-top'>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-         <a class="navbar-brand" href="#">LESSMORE</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-             <div class="navbar-nav">
-                 <%# <a class="nav-item nav-link active" href="#">ユーザ<span class="sr-only">(current)</span></a> %>
-                 <a class="nav-item nav-link">  <%= link_to "log in", new_user_session_path %></a>
-                 <a class="nav-item nav-link"><%= link_to "sign up", new_user_registration_path %></a>
-                 <a class="nav-item nav-link" href="#">アプリ紹介</a>
-             </div> 
-         </div>
-     </nav>
-     </div>
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">LESSMORE</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <% if user_signed_in?%>
-        <a class="nav-link">  <%= link_to "log out", destroy_user_session_path, method: :delete %></a>
-        <a class="nav-link">  <%= current_user.nickname %></a>
 
-        <%else%>
-        <a class="nav-link">  <%= link_to "log in", new_user_session_path %></a>
-        <a class="nav-link">  <%= link_to "sign up", new_user_registration_path %></a>
-        <%end%>
-      </nav>
-    </div>
-  </header>
+<%else%>
+  
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
 
   <main role="main" class="inner cover">
     <h1 class="cover-heading">Less is more.</h1>
@@ -117,23 +48,22 @@
 
     
  
-</div>
+
 	
 
     <%= image_tag "micheile-henderson-lZ_4nPFKcV8-unsplash.jpg", class:"main-pict" %>
-    <p class="btn btn-lg btn-secondary">
-       <%= link_to "SIGN UP!!", new_user_session_path %>
-    </p>
-
-
+  
 
   </main>
 
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>@All rights reseved for LessMore.inc</p>
     </div>
   </footer>
 </div>
 
 <%end%>
+
+
+<%= render 'devise/shared/footer'%>
