@@ -1,49 +1,32 @@
+
 <div class="items-sell-main">
-    <h2 class="items-sell-title">欲しい物、したいことを入力しよう</h2>
+    <h2 class="items-sell-title">支出を記録しよう</h2>
+
+契約プランを見直すだけで、月数千円の積み立てができます！
+ヒント：格安SIM契約者の平均料金：￥2471
+
     <%= form_with model:@expense, url:'/expenses', local: true do |f| %>
 
 
     <div class="new-items">
       <div class="weight-bold-text">
         
-        <span class="indispensable">必須</span>
+        <span class="indispensable">家賃</span>
       </div>
-      <%= f.text_area :internet, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :house_rent, class:"items-text", id:"item-name", placeholder:"", maxlength:"11" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
+          <span class="indispensable">携帯料金</span>
         </div>
-        <%= f.text_area :cell_phone, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+        <%= f.text_area :cell_phone, class:"items-text", id:"item-name", placeholder:")", maxlength:"11" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
+          <span class="indispensable">食費</span>
         </div>
-        <%= f.text_area :food, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
+        <%= f.text_area :food, class:"items-text", id:"item-name", placeholder:"", maxlength:"11" %>
       <div class="items-explain">
-        <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :gas, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :water, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.text_area :electric, class:"items-text", id:"item-name", placeholder:"欲しいもの（必須 40文字まで)", maxlength:"40" %>
-      <div class="items-explain">
-        <div class="weight-bold-text">
-        　値段
-          <span class="indispensable">必須</span>
-        </div>
+  
+       
         
         
       <%= f.submit "決定" ,class:"sell-btn" %>

@@ -15,6 +15,6 @@ end
 private
 
 def expense_params
-  params.permit(:internet, :house_rent, :cell_phone, :food, :gas, :water, :electric)
+  params.permit(:house_rent, :cell_phone, :food)
 
 end

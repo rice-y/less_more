@@ -34,13 +34,9 @@ ActiveRecord::Schema.define(version: 2020_09_17_181159) do
   end
 
   create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "internet"
     t.integer "cell_phone"
     t.integer "food"
     t.integer "house_rent"
-    t.integer "gas"
-    t.integer "water"
-    t.integer "electric"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
