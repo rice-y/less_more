@@ -1,0 +1,17 @@
+<footer class="fixed-bottom">
+<% if user_signed_in?%>
+
+  <p class="btn btn-lg btn-secondary">
+    <%= link_to "支出を記録", new_expense_path %>
+  </p>
+	
+
+  <p class="btn btn-lg btn-secondary">
+     <%= link_to "目標を設定する", new_target_path %>
+  </p>
+<% else %>
+  <p class="btn btn-lg btn-secondary">
+     <%= link_to "SIGN UP!!", new_user_session_path %>
+  </p>
+<% end %>
+</footer>

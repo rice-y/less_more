@@ -1,2 +1,6 @@
-.main-pict{height:50vh;
-             width: 30vw;}
+.main-pict{
+  max-width: 80%;
+  max-height: 80%;
+  width: auto;
+  height: auto;
+}
