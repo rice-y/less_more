@@ -3,7 +3,7 @@ class TargetsController < ApplicationController
     @targets = Target.all
     @expense = Expense.all
     
-    # @data = [['食費', @expense], ['通信費', @expense.internet], ['家賃', @expense.water]]
+    @data = [['食費', 1000], ['通信費', 800], ['家賃', 8000]]
   end
 
   def create

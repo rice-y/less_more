@@ -9,22 +9,7 @@
     <div class="contents row">
   <% @targets.each do |target| %>
    
-<div class="table-responsive">
-    <table class="table">
-    <tbody>
-        <tr>
-            <td><%= target.image%></td>
-            <td><%= target.name%></td>
-            <td>￥<%= target.price%></td>
-            <td>期限：<%= target.deadline%></td>
-        </tr>
-<%# 
-       
-       
-    </tbody>
-</table>
-<%= image_tag target.image %>
-   <%= pie_chart @data %> 
+    <%= pie_chart @data %>
 </div>
     
 
