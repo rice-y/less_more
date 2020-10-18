@@ -1,44 +1,5 @@
 <%= render "devise/shared/header" %>
-<% if user_signed_in?%>
 
-
-  <main role="main" class="inner cover">
-    
-   
-
-    <div class="contents row">
-  <% @targets.each do |target| %>
-   
-    <%= pie_chart @data %>
-</div>
-    
-
-  <% end %>
-</div>
-
-  
-
-</main>
-
-
-</div>
-
-<%else%>
-
-
-<h1>売り上げ</h1>
-<div class="card bg-dark text-white">
-  <img class="card-img" src="" alt="Card image">
-  <div class="card-img-overlay">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">画像の上にテキストを重ねることができます。</p>
-  </div>
-</div>
-
-
-
-
-<h1>売り上げ</h1>
   
 
 <h1>マネージャーより</h2>
@@ -80,7 +41,7 @@
   </footer>
 </div>
 
-<%end%>
+
 
 
 <%= render 'devise/shared/footer'%>
